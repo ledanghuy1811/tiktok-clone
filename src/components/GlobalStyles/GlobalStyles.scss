@@ -10,6 +10,7 @@
     // default layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+    --default-layout-horizontal-spacer: 24px;
 }
 
 * {
@@ -33,7 +34,6 @@ button,
 input,
 [tabindex] {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
     outline: none;
     border: none;
 }
