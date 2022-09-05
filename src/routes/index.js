@@ -1,5 +1,5 @@
 // Layouts
-import { HeaderOnly } from '~/components/Layout'
+import { HeaderOnly } from '~/components/Layout';
 
 // pages
 import Home from '~/pages/Home';
@@ -19,18 +19,18 @@ const publicRoutes = [
         component: Following,
     },
     {
-        path: '/profile',
+        path: '/@:nickname',
         component: Profile,
     },
     {
         path: '/upload',
         component: Upload,
-        layout: HeaderOnly
+        layout: HeaderOnly,
     },
     {
         path: '/search',
         component: Search,
-        layout: null
+        layout: null,
     },
 ];
 
