@@ -12,6 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
 
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
@@ -20,6 +21,7 @@ import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import { MessageIcon, PostIcon, UploadIcon } from '~/components/Icons';
 import Search from '../Search';
+import routesConfig from '~/config/routes';
 
 const cx = classNames.bind(styles);
 
@@ -94,7 +96,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="Tiktok" />
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Tiktok" />
+                </Link>
 
                 <Search />
 
@@ -138,7 +142,7 @@ function Header() {
                             <Image
                                 className={cx('user-avatar')}
                                 src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/279490615_2545533552454022_3826045821054812564_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=wFUn2Mgd0OUAX_keCjF&_nc_ht=scontent.fhan2-3.fna&oh=00_AT8gifc9cDRnMfUTPFKqcXm-hML68zIECMhJkgC2jPSGag&oe=631BA3C8"
-                                alt="Nguyen Van A"
+                                alt="Le Dinh Huy"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
